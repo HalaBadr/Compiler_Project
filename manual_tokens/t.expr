@@ -1,0 +1,2 @@
+i: int <- 4;
+j: String <- "abc";

@@ -1,0 +1,4 @@
+x_x22 : int <- 8;
+j: while (not(x=0)) loop {
+    if(x=8) out_String("ghgdhjghkh").;
+}

@@ -1,0 +1,18 @@
+class A {
+
+   var : Int <- 0
+
+   value() : Int { var };
+
+   set_var(num : Int) : VOID {
+      {
+         x <- num;
+         var <- x;
+      }
+   };
+   };
+
+
+
+
+

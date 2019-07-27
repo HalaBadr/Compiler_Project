@@ -1,0 +1,100 @@
+x = 1
+t0 = - 1
+y = t0
+t1 = ~ 1
+z = t1
+t2 = NOT 5
+e = t2
+value:
+		Let :
+				c = 1
+				d = 2
+
+				t4 = c = 3	
+				IFFALSE t4 GOTO L0
+				t4 = 4
+				GOTO L1
+				L0 : 
+						t4 = 8
+				L1 : 
+						t5 = d = t4	
+						c = t5	
+						t6 = c + d	
+						t7 = t6 + v	
+						t8 = t7 + y	
+						c = t8	
+
+				v = c	
+				return c
+func:
+		L2 : 
+				t9 = x = 0	
+				t10 = NOT t9
+				IFFALSE t10 GOTO L3
+				t11 = x - 1	
+				x = t11	
+				GOTO L2
+		L3 : 
+case_test:
+
+		Case :
+				t13 = TYPEOF i
+
+				Case #1 :
+						IFFALSE t13 = Int GOTO Case #2
+						t13 = 5
+						GOTO L4
+
+				Case #2 :
+						IFFALSE t13 = String GOTO L4
+						t13 = "hello"
+						GOTO L4
+
+				L4:
+						y = t13	
+factorial:
+		t15 = x = 1	
+		IFFALSE t15 GOTO L7
+		t15 = x
+		GOTO L8
+		L7 : 
+				t16 = x - 1	
+				Param t16	
+				t17 = CALL_factorial(1)
+				t18 = x * t17	
+				t18 = t18
+		L8 : 
+				t19 = x + 6	
+				x = t19	
+				x = 5	
+				Param "=="	
+				t20 = x.CALL_out_string(1)
+				Param x	
+				t21 = CALL_out_string2(1)
+				Param "\n"	
+				t22 = CALL_out_string3(1)
+				return t22
+Param 17	
+t23 = CALL_factorial(1)
+a = t23
+Param 10	
+t24 = CALL_factorial(1)
+t25 = 2 * t24	
+t26 = 1 + t25	
+t27 = t26 + 3	
+t28 = 4 * 5	
+t29 = t28 / 6	
+t30 = t27 - t29	
+b = t30
+set_var:
+		t31 = y / z	
+		t32 = x + t31	
+		var1 = t32	
+		t34 = ISVOID var1
+		IFFALSE t34 GOTO L9
+		t34 = 5
+		L9 :
+				Param num	
+				t35 = CALL_value(1)
+				var1 = t35	
+n = "hello"
